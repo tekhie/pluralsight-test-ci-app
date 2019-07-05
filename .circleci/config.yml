@@ -8,7 +8,11 @@ jobs:
       - run: rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
       - run: yum install -y npm
       - run:
-          command: mkdir -p /src
+          command: |
+              echo "creating new folder"
+              mkdir -p /src
+              echo "Copying file(s) ..."
+              cp readme.md /src
       - run:
           command: ls -al
 
