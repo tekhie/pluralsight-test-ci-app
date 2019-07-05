@@ -5,6 +5,6 @@ jobs:
       - image: centos:centos6
     steps:
       - checkout
-      - run: rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rp
+      - run: rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
       - run: yum install -y npm
       - run: cd /src; npm install
