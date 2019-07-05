@@ -10,8 +10,8 @@ jobs:
       - run:
           #command: cp *.* /src
           command: ls -al
-      #- run:
-      #    command: 
+      - run:
+          command: ["sh", "-c", "cp -r /* /src"]
       #      cd /src
       #- run: npm install
       
