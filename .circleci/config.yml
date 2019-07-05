@@ -5,22 +5,26 @@ jobs:
       - image: centos:centos6
     steps:
       - checkout
+      ## Enable EPEL for Node.js
       - run: rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
+      ## Install Node...
       - run: yum install -y npm
       - run:
           command: |
               echo "creating new folder"
+              # create directory in container
               mkdir -p /src
               echo "Copying file(s) ..."
+              ## Copy app to /src including subfolders
               cp -r * /src
+              # change directory to /src
               cd /src
       - run:
           command: |
-              #disables ssl checking to prevent ssl error when trying to install
+              # disables ssl checking to prevent ssl error when trying to install
               npm config set strict-ssl false
-              npm install
-              
-              
+              # Install app and dependencies into /src
+              npm install       
       - run:
           #this displays the github repo files
           command: ls -al
