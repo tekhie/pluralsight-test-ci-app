@@ -6,3 +6,5 @@ jobs:
       
     steps:
         - checkout
+   # run tests!
+        - run: mocha test
