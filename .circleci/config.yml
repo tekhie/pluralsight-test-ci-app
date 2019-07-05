@@ -10,7 +10,7 @@ jobs:
       - run:
           #command: cp *.* /src
           command: ls -al
-      - run:
+      - run: |
           command: mkdir -p /src
           command: cp -r /* /src
       #      cd /src
