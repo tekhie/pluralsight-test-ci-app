@@ -30,6 +30,7 @@ jobs:
           command: ls -al
       -run: 
           command: |
-              cd /src && node ./app.js
+              cd /src
+              node ./app.js
       
 
