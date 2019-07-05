@@ -3,3 +3,6 @@ jobs:
   build:
     docker:
       - image: nginx
+      
+    steps:
+        - checkout
