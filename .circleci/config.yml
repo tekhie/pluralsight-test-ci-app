@@ -28,9 +28,8 @@ jobs:
       - run:
           #this displays the github repo files
           command: ls -al
-    test:
-        override:    
-          - run: mocha
-
+      -run: 
+          command: |
+              cd /src && node ./app.js
       
 
