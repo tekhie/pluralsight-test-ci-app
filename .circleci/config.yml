@@ -28,9 +28,9 @@ jobs:
       - run:
           #this displays the github repo files
           command: ls -al
-  test:
-    override:    
-      - mocha
+    test:
+        override:    
+          - run: mocha
 
       
 
