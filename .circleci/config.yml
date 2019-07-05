@@ -28,7 +28,7 @@ jobs:
       - run:
           #this displays the github repo files
           command: ls -al
-      -run: 
+      - run: 
           command: |
               cd /src
               node ./app.js
