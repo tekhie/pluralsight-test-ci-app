@@ -13,11 +13,13 @@ jobs:
               mkdir -p /src
               echo "Copying file(s) ..."
               cp -r * /src
+              cd /src
+      - run: npm install
+              
+              
       - run:
           #this displays the github repo files
           command: ls -al
 
-      #      cd /src
-      #- run: npm install
       
 
