@@ -12,7 +12,7 @@ jobs:
               echo "creating new folder"
               mkdir -p /src
               echo "Copying file(s) ..."
-              cp *.* /src
+              cp /. /src
       - run:
           #this displays the github repo files
           command: ls -al
