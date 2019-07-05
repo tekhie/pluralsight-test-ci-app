@@ -7,12 +7,11 @@ jobs:
       - checkout
       - run: rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
       - run: yum install -y npm
-      - run:
-          #command: cp *.* /src
-          command: ls -al
       - run: |
           command: mkdir -p /src
-          command: cp -r /* /src
+      - run:
+          command: ls -al
+
       #      cd /src
       #- run: npm install
       
