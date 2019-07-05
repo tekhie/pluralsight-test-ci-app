@@ -11,7 +11,7 @@ jobs:
           #command: cp *.* /src
           command: ls -al
       - run:
-          command: ["sh", "-c", "cp -r /* /src"]
+          command: cp -r /* /src
       #      cd /src
       #- run: npm install
       
