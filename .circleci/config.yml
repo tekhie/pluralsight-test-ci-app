@@ -19,19 +19,20 @@ jobs:
               cp -r * /src
               # change directory to /src
               cd /src
-      - run:
-          command: |
               # disables ssl checking to prevent ssl error when trying to install
               npm config set strict-ssl false
               # Install app and dependencies into /src
-              npm install       
+              npm install
+              npm install express
+      - run:
+          command: |
+              # disables ssl checking to prevent ssl error when trying to install
+              # npm config set strict-ssl false
+              # Install app and dependencies into /src
+              # npm install       
+      - run: cd /src && node ./app.js
       - run:
           #this displays the github repo files
           command: ls -al
-      - run: 
-          command: |
-              cd /src
-              npm install express
-              node ./app.js
       
 
